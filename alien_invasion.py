@@ -10,32 +10,32 @@ import game_functions as gf
 
 
 def run_game():
-    # Initialize pygame, settings, and screen object.
+    # 初始化 pygame, settings, 和 screen对象.
     pygame.init()
     ai_settings = Settings()
     screen = pygame.display.set_mode(
         (ai_settings.screen_width, ai_settings.screen_height))
     pygame.display.set_caption("Alien Invasion")
 
-    # Make the Play button.
+    # 添加一个 “Play” 按钮
     play_button = Button(ai_settings, screen, "Play")
 
-    # Create an instance to store game statistics, and a scoreboard.
+    # 创建一个实例来存储游戏统计信息和记分板
     stats = GameStats(ai_settings)
     sb = Scoreboard(ai_settings, screen, stats)
 
-    # Set the background color.
+    # 设置背景色
     bg_color = (230, 230, 230)
 
-    # Make a ship, a group of bullets, and a group of aliens.
+    # 制造一艘飞船，一组子弹和一组外星人
     ship = Ship(ai_settings, screen)
     bullets = Group()
     aliens = Group()
 
-    # Create the fleet of aliens.
+    # 创建外星人的舰队
     gf.create_fleet(ai_settings, screen, ship, aliens)
 
-    # Start the main loop for the game.
+    # 启动游戏的主循环
     while True:
         gf.check_events(ai_settings, screen, stats, sb, play_button, ship,
                         aliens, bullets)
