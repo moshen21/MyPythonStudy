@@ -31,7 +31,7 @@ def run_game():
 
 class Beauty():
     def __init__(self,screen):
-        '''初始化并设置位置'''
+        # 初始化并设置位置
         self.screen = screen
 
         # 加载图像并获取外接矩形
