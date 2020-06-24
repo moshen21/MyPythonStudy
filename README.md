@@ -1,4 +1,4 @@
-# <font face="楷体">彩笔的Python学习LOADING</font>
+# <font face="楷体">彩笔的Python自学LOADING</font>
 
 <font face="楷体">是这本书的习题答案，直接上封面</font>
 
